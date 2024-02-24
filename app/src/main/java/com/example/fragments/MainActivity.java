@@ -1,6 +1,9 @@
 package com.example.fragments;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -14,17 +17,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ArrayList<Valute> valutes = new ArrayList<>();
-        valutes.add(new Valute("rubl", "100", null));
-        valutes.add(new Valute("rubl", "100", null));
-        valutes.add(new Valute("rubl", "100", null));
-        valutes.add(new Valute("rubl", "100", null));
-        valutes.add(new Valute("rubl", "100", null));
-        valutes.add(new Valute("rubl", "100", null));
-        valutes.add(new Valute("rubl", "100", null));
-        valutes.add(new Valute("rubl", "100", null));
-        RecyclerView recyclerView = findViewById(R.id.RV);
-        ValuteAdapter valuteAdapter = new ValuteAdapter(valutes);
-        recyclerView.setAdapter(valuteAdapter);
+        ValuteFragment valuteFragment = new ValuteFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction ft = fragmentManager.beginTransaction();
+        ft.add(R.id.cont, valuteFragment);
+        ft.commit();
     }
 }
