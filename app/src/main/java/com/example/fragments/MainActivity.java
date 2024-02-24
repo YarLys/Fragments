@@ -18,9 +18,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ValuteFragment valuteFragment = new ValuteFragment();
+
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction ft = fragmentManager.beginTransaction();
-        ft.add(R.id.cont, valuteFragment);
+        if (!valuteFragment.isAdded()) {
+            ft.add(R.id.cont, valuteFragment);
+        }
         ft.commit();
     }
 }

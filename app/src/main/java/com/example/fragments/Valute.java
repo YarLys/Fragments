@@ -4,6 +4,19 @@ import android.graphics.Bitmap;
 
 public class Valute {
     public String Name;
+
+    public String getName() {
+        return Name;
+    }
+
+    public String getValue() {
+        return Value;
+    }
+
+    public Bitmap getPicture() {
+        return picture;
+    }
+
     public String Value;
     public Bitmap picture;
 

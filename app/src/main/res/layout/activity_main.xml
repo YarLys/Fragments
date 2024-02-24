@@ -8,22 +8,18 @@
     android:orientation="vertical">
 
     <fragment
-        android:id="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-    </fragment>
-    <fragment
         android:id="@+id/cont"
+        android:name="com.example.fragments.ValuteFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.2">
     </fragment>
-    <fragment
+    <!--<fragment
         android:id="@+id/footer"
+        android:name="com.example.fragments.ValuteFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
-    </fragment>
+    </fragment>-->
 
 </LinearLayout>

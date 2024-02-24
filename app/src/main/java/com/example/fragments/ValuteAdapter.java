@@ -30,9 +30,9 @@ public class ValuteAdapter extends RecyclerView.Adapter<ValuteAdapter.ValuteHold
     @Override
     public void onBindViewHolder(@NonNull ValuteHolder holder, int position) {
         Valute valute = valutes.get(position);
-        holder.Name.setText(valute.Name);
-        holder.Value.setText(valute.Value);
-        holder.picture.setImageBitmap(valute.picture);
+        holder.Name.setText(valute.getName());
+        holder.Value.setText(valute.getValue());
+        holder.picture.setImageBitmap(valute.getPicture());
     }
 
     @Override
